@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Mastro_Fornaio.Info"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mastro_Fornaio"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock>ABOUT</TextBlock>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="600" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="500" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.Column="1" BorderBrush="White" BorderThickness="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Image Source="/Assets/Custom/Food/Pizza.png" Margin="40" Grid.Row="0" HorizontalAlignment="Center" />
+                <StackPanel Grid.Row="1">
+                    <TextBlock Text="Mastro Fornaio" FontSize="60" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="Version 1.0.0 (Progetto Open Source)" FontSize="20" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="Made by Simone Giordano" FontSize="30" HorizontalAlignment="Center" Margin="10" />
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <HyperlinkButton NavigateUri="https://www.instagram.com/_jordan313/">
+                        <Image Source="Assets/Custom/Social/Instagram.png" Width="65" />
+                    </HyperlinkButton>
+
+                    <HyperlinkButton NavigateUri="https://github.com/SimoneGiordano2003/Mastro_Fornaio">
+                        <Image Source="Assets/Custom/Social/Github.png" />
+                    </HyperlinkButton>
+
+                    <HyperlinkButton NavigateUri="https://www.linkedin.com/in/simone-giordano-1312b61b3/">
+                        <Image Source="Assets/Custom/Social/LinkedIn.png" Width="72" />
+                    </HyperlinkButton>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="Mastro_Fornaio.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mastro_Fornaio"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Row="0">
+            <Button x:Name="Bot" Click="Menu_Open" Content="&#xE700;" FontSize="50" FontFamily="Segoe MDL2 Assets" />
+            <TextBlock x:Name="RisultatoPane" Text="Menu" RelativePanel.RightOf="Bot" RelativePanel.AlignVerticalCenterWith="Bot" FontSize="30" Margin="20,0,0,0" />
+        </RelativePanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition MinWidth="850"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <SplitView x:Name="Menu" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="70">
+                <SplitView.Pane>
+                    <ListBox SelectionMode="Single" Name="SelezioneElemento" SelectionChanged="Menu_SelectionChanged">
+
+                        <ListBoxItem Name="Item_Home">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="&#xE80F;" FontSize="50" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" />
+                                <TextBlock Text="Home" FontSize="20" Margin="20,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListBoxItem>
+
+                        <ListBoxItem Name="Item_Napoletana">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="N" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" />
+                                <TextBlock Text="Napoletana" FontSize="20" Margin="30,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListBoxItem>
+
+                        <ListBoxItem Name="Item_Romana">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="R" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" />
+                                <TextBlock Text="Romana" FontSize="20" Margin="37,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListBoxItem>
+
+                        <ListBoxItem Name="Item_Pane">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="P" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" />
+                                <TextBlock Text="Pane" FontSize="20" Margin="40,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListBoxItem>
+
+                        <ListBoxItem Name="Item_About">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="&#xE946;" FontSize="50" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" />
+                                <TextBlock Text="About" FontSize="20" Margin="20,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </SplitView.Pane>
+            </SplitView>
+            <Frame x:Name="MainFrame" Grid.Column="1" />
+        </Grid>
+    </Grid>
+</Page>
